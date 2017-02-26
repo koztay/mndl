@@ -1,5 +1,5 @@
 """
-WSGI config for ecommerce2 project.
+WSGI config for mandal project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -12,6 +12,6 @@ import os
 from django.core.wsgi import get_wsgi_application
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mandal.settings")
-# os.environ.setdefault("DJANGO_SETTINGS_MODULE", "ecommerce2.settings.new_theme")
+# os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mandal.settings.new_theme")
 
 application = get_wsgi_application()
