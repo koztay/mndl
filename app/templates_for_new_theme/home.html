@@ -1,0 +1,66 @@
+{% extends "__base.html" %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+{% block messages %}
+    {% include '_messages.html' %}
+{% endblock %}
+
+{% block sliders %}
+    {% include "visual_site_elements/sliders/sliders.html" with object_list=sliders %}
+{% endblock %}
+
+{% block content %}
+
+{% endblock %}
+
+
+{% block promotions %}
+    {% include "visual_site_elements/promotions/promotions.html" with object_list=promotions %}
+{% endblock %}
+
+{% block products %}
+{#    {% include '_products_section.html' %}#}
+    {% include "products/home_page_products.html" with object_list=products %}
+{% endblock %}
+
+{% block banners %}
+    {% include "visual_site_elements/horizontal_banner/horizontal_banner.html" with object_list=horizontal_banner %}
+{% endblock %}
+
+{% block popular %}
+{#    {% include '_popular_section.html' %}#}
+    {% include "products/home_page_selected_products.html" with object_list=products2 %}
+{% endblock %}
+
+{% block support %}
+    {% include '_support_section.html' %}
+{% endblock %}
+
+{% block testimonial %}
+    {% include 'visual_site_elements/testimonials/testimonials.html' with object_list=testimonials %}
+{% endblock %}
+
+{% block blog %}
+{#    {% include '_blog_section.html' %}#}
+{% endblock %}
+
+{% block brands %}
+    {% include '_client_brand_section.html' %}
+{% endblock %}
+
+{% block subscribe %}
+    {% include '_subscribe_section.html' with form=form %}
+{% endblock %}
+
+{% block jquery %}
+{% include 'javascript.js' %}
+{% endblock %}
+
+
+
+
+
+
+
+

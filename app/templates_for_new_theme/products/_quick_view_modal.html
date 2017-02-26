@@ -1,0 +1,94 @@
+{% load staticfiles %}
+<!-- quick view modal -->
+<div class="modal fade" id="quick-view-modal" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal"
+                        aria-hidden="true">&times;</button>
+                <div class="row">
+                    <!-- Modal view slider -->
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="aa-product-view-slider">
+                            <div class="simpleLens-gallery-container" id="demo-1">
+                                <div class="simpleLens-container">
+                                    <div class="simpleLens-big-image-container">
+                                        <a class="simpleLens-lens-image"
+                                           data-lens-image="img/view-slider/large/polo-shirt-1.png">
+                                            <img src="{% static 'img/view-slider/medium/polo-shirt-1.png' %}"
+                                                 class="simpleLens-big-image">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="simpleLens-thumbnails-container">
+{#                                                                <a href="#" class="simpleLens-thumbnail-wrapper"#}
+{#                                                                   data-lens-image="img/view-slider/large/polo-shirt-1.png"#}
+{#                                                                   data-big-image="img/view-slider/medium/polo-shirt-1.png">#}
+{#                                                                    <img src="{% static 'img/view-slider/thumbnail/polo-shirt-1.png' %}">#}
+{#                                                                </a>#}
+{#                                                                <a href="#" class="simpleLens-thumbnail-wrapper"#}
+{#                                                                   data-lens-image="img/view-slider/large/polo-shirt-3.png"#}
+{#                                                                   data-big-image="img/view-slider/medium/polo-shirt-3.png">#}
+{#                                                                    <img src="{% static 'img/view-slider/thumbnail/polo-shirt-3.png' %}">#}
+{#                                                                </a>#}
+{##}
+{#                                                                <a href="#" class="simpleLens-thumbnail-wrapper"#}
+{#                                                                   data-lens-image="img/view-slider/large/polo-shirt-4.png"#}
+{#                                                                   data-big-image="img/view-slider/medium/polo-shirt-4.png">#}
+{#                                                                    <img src="{% static 'img/view-slider/thumbnail/polo-shirt-4.png' %}">#}
+{#                                                                </a>#}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal view content -->
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="aa-product-view-content">
+                            <h3 class="modal-product-title">{{ product.title }}</h3>
+                            <form id='add-form' method='GET' action="{% url 'cart' %}">
+                                        <p id='jquery-message' class='lead'>
+
+                                        </p>
+                                            <div class="aa-price-block">
+
+                                                <span class="aa-product-view-price" id='price'>
+
+                                                </span>
+                                            </div>
+                                            <div class="row aa-prod-quantity">
+                                                <div class="col-xs-6"><p class="aa-product-avilability">Stok Durumu: <span>10+</span></p></div>
+                                                <div class="col-xs-6"><p class="aa-prod-category">
+                                                Kategori: <a class="category-url" href="{{ product.get_main_category.get_absolute_url }}">{{ product.get_main_category }}</a>
+                                                </p></div>
+
+                                            </div>
+    {#                                    {% autoescape off %}#}
+    {#                                        <p>{{ object.description|truncatechars:150 }}</p>#}
+    {#                                    {% endautoescape %}#}
+                                        <div class="aa-prod-quantity">
+                                            <h3>Adet:</h3>
+                                            <input class='form-control' type='number' name='qty' value='1'/>
+
+                                        </div>
+                                        <div class="aa-prod-quantity">
+                                            <h3>Seçenek:</h3>
+                                            <select id="variation" name='item' class='form-control variation_select'>
+                                            </select>
+                                        </div>
+                                        <div class="aa-prod-view-bottom">
+{#                                          <input id='submit-btn' type='submit' value='Add to Cart' class='btn btn-default'/>#}
+{#                                            <button class="aa-filter-btn" id='submit-btn'>Sepete At</button>#}
+                                            <a id='submit-btn' class="aa-add-to-cart-btn" href="#">Sepete At</a>
+    {#                                      <a class="aa-add-to-cart-btn" href="#">Wishlist</a>#}
+    {#                                      <a class="aa-add-to-cart-btn" href="#">Compare</a>#}
+                                        </div>
+                                    </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- / quick view modal -->

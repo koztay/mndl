@@ -1,0 +1,7 @@
+# Pro-tip: Try not to put anything here. Avoid dependencies in
+#	production that aren't in development.
+-r base.txt
+
+gunicorn==19.3.0
+psycopg2==2.6
+django-anymail==0.7

@@ -1,0 +1,46 @@
+bin/
+include/
+lib/
+.DS_STORE
+.Python
+
+;;files to ignore
+
+
+LICENSE
+Notlar.txt
+
+
+;;extensions to ignore
+*.log
+*.pot
+*.pyc
+#*.sh
+*.xls
+*.xlsx
+*.csv
+*.xml
+*.sqlite3
+*.sql
+*.json
+*.bz2
+*.gz
+.env
+.env_dev
+local_dev.env
+.coverage
+htmlcov
+
+
+;;directories to ignore
+.idea/
+app/importer/data
+bootstrap template/
+images/
+static_in_env
+eski site wayback/
+*__pycache__
+__importer_xls_files
+
+.cache
+app/importer/tests/data/
